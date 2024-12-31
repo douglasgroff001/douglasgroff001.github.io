@@ -1,0 +1,361 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+    line-height: 1.6; /* Melhor legibilidade */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1f1f1f; /* Cor mais escura para o cabeçalho */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona um leve sombreamento */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #e0e0e0; /* Texto claro */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 5px 10px; /* Espaço ao redor do texto */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+header nav ul li a:hover {
+    color: #bb86fc; /* Cor ao passar o mouse */
+    background-color: #2a2a2a; /* Fundo para o hover */
+}
+
+/* Seções */
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Seção de Introdução */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2a2a; /* Fundo mais suave para a introdução */
+    border-radius: 8px;
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+    gap: 20px;
+}
+
+.intro-text {
+    max-width: 50%;
+}
+
+.intro h1 {
+    color: #bb86fc; /* Cor roxa para o título */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: #e0e0e0; /* Texto claro */
+}
+
+.intro-img {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-perfil {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #bb86fc; /* Borda roxa para destacar */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+}
+
+/* Seção de Destaques */
+.destaques {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permite ajuste responsivo */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.projeto {
+    width: 15%; /* Reduzido pela metade */
+    background-color: #333333; /* Fundo escuro suave para cada projeto */
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-10px); /* Efeito de hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.projeto img {
+    width: 80%; /* Reduz o tamanho da imagem */
+    border-radius: 8px;
+    margin: 0 auto; /* Centraliza a imagem */
+    display: block;
+}
+
+.projeto h3 {
+    color: #bb86fc; /* Cor roxa para os títulos dos projetos */
+    margin-top: 10px;
+}
+
+.projeto p {
+    color: #e0e0e0; /* Texto claro */
+}
+
+.projeto p a {
+    color: #e0e0e0; /* Link branco */
+    text-decoration: none; /* Remove sublinhado */
+    transition: color 0.3s;
+}
+
+.projeto p a:hover {
+    color: #bb86fc; /* Link roxo ao passar o mouse */
+}
+
+/* Seção Trabalhos */
+.trabalhos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhamento dos elementos no topo */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px; /* Espaçamento interno */
+}
+
+.trabalhos .projeto {
+    width: 300px; /* Tamanho fixo para uniformizar */
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trabalhos .projeto img {
+    width: 80%; /* Ajuste proporcional para imagens */
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.trabalhos .projeto h3 {
+    color: #bb86fc;
+    margin-top: 10px;
+}
+
+.trabalhos .projeto p {
+    color: #e0e0e0;
+    margin-top: 10px;
+}
+
+
+/* Estilo para a seção de contato */
+.contato {
+    max-width: 600px; /* Limita a largura da seção */
+    margin: 50px auto; /* Centraliza a seção na página */
+    background-color: #1f1f1f; /* Fundo escuro */
+    padding: 20px 30px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
+    text-align: center; /* Centraliza texto e elementos */
+}
+
+.contato h1 {
+    color: #bb86fc; /* Cor do título */
+    font-size: 2em; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.contato p {
+    color: #e0e0e0; /* Texto claro */
+    font-size: 1.1em; /* Aumenta o tamanho do texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo para o formulário */
+#contato-form {
+    display: flex;
+    flex-direction: column; /* Organiza os campos em coluna */
+    gap: 15px; /* Espaço entre os campos */
+}
+
+.campo {
+    text-align: left; /* Alinha as labels à esquerda */
+}
+
+.campo label {
+    color: #e0e0e0; /* Cor do texto */
+    font-weight: bold; /* Destaca o texto */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    display: block; /* Garante que fique acima do campo */
+}
+
+.campo input,
+.campo textarea {
+    width: 100%; /* Preenche a largura do formulário */
+    padding: 10px; /* Espaçamento interno */
+    border: 2px solid #333333; /* Borda inicial */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #2a2a2a; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+    font-size: 1em; /* Tamanho da fonte */
+    transition: border 0.3s; /* Animação na borda */
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #bb86fc; /* Muda a cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão */
+}
+
+.campo textarea {
+    resize: vertical; /* Permite redimensionar apenas verticalmente */
+}
+
+/* Botão de envio */
+button[type="button"] {
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #bb86fc; /* Fundo roxo */
+    color: #121212; /* Texto escuro */
+    border: none; /* Remove borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1em; /* Aumenta o texto */
+    font-weight: bold; /* Destaca o texto */
+    cursor: pointer; /* Mostra o cursor de clique */
+    transition: background-color 0.3s, transform 0.2s; /* Animações */
+}
+
+button[type="button"]:hover {
+    background-color: #a673e8; /* Cor mais clara ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento no botão */
+}
+
+button[type="button"]:active {
+    transform: scale(0.95); /* Reduz o botão ao clicar */
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .contato {
+        padding: 15px; /* Reduz o padding em telas menores */
+    }
+
+    .contato h1 {
+        font-size: 1.8em; /* Reduz tamanho do título */
+    }
+
+    .contato p {
+        font-size: 1em; /* Ajusta tamanho do texto */
+    }
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 10px 0; /* Reduzindo o padding para menor altura */
+    margin-top: 40px;
+    border-top: 2px solid #bb86fc; /* Linha decorativa no topo */
+    font-size: 0.9em; /* Diminuindo tamanho da fonte */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px; /* Reduzindo espaço entre elementos */
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px; /* Menor espaçamento entre links */
+}
+
+footer ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 20px; /* Diminuindo tamanho dos ícones */
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #bb86fc;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        max-width: 100%;
+    }
+
+    .intro-img {
+        max-width: 60%;
+    }
+
+    .destaques {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    footer ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .intro h1 {
+        font-size: 1.8em;
+    }
+
+    .intro p {
+        font-size: 1em;
+    }
+}
