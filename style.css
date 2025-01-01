@@ -84,7 +84,7 @@ section {
 }
 
 .foto-perfil {
-    width: 100%;
+    width: 80%;
     border-radius: 50%;
     border: 4px solid #bb86fc; /* Borda roxa para destacar */
     object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
@@ -143,7 +143,7 @@ section {
 .trabalhos {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinhamento dos elementos no topo */
+    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px; /* Espaçamento interno */
@@ -175,7 +175,6 @@ section {
     color: #e0e0e0;
     margin-top: 10px;
 }
-
 
 /* Estilo para a seção de contato */
 .contato {
@@ -292,6 +291,8 @@ footer ul {
     list-style: none;
     padding: 0;
     margin-top: 5px; /* Reduzindo espaço entre elementos */
+    display: flex;
+    justify-content: center;
 }
 
 footer ul li {
@@ -339,6 +340,10 @@ footer ul li a:hover {
         display: block;
         margin: 10px 0;
     }
+
+    .trabalhos {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -357,5 +362,23 @@ footer ul li a:hover {
 
     .intro p {
         font-size: 1em;
+    }
+
+    .trabalhos {
+        flex-direction: column;
+    }
+
+    .trabalhos .projeto {
+        width: 100%;
+    }
+
+    footer ul {
+        flex-direction: row; /* Garante que os ícones fiquem lado a lado */
+        justify-content: center; /* Centraliza os ícones */
+    }
+
+    footer ul li {
+        display: inline-block; /* Mantém os ícones lado a lado */
+        margin: 0 15px; /* Adiciona espaço entre os ícones */
     }
 }
