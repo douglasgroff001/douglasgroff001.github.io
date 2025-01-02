@@ -8,22 +8,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="projetos.html">Trabalhos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <!-- Ícone do hambúrguer para dispositivos móveis -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+		<!-- Menu de navegação -->
+        <ul id="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html">Trabalhos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="sobre">
         <h1>Sobre Mim</h1>
-        <p>Estou em constante evolução e busco aprimorar minhas habilidades nas áreas de programação de sistemas, banco de dados e desenvolvimento de ferramentas para a web.</p>
-        <p>Meu objetivo é implementar soluções inovadoras e criativas, sempre com foco na otimização de processos e na agregação de valor.</p>
-        <p>Busco expandir minhas competências técnicas, ao mesmo tempo em que desenvolvo habilidades essenciais para meu crescimento profissional, com o intuito de contribuir de forma significativa para o meu campo de atuação.</p>
+        <p>Estou em constante evolução e busco aprimorar minhas habilidades na área de programação de sistemas, banco de dados e desenvolvimento de ferramentas para web.</p>
+        <p>Tenho como objetivo implementar soluções inovadoras e criativas, sempre com foco em otimizar processos e agregar valor.</p>
+        <p>Meu principal objetivo é expandir minhas competências técnicas, ao mesmo tempo em que desenvolvo outras aptidões essenciais para meu crescimento profissional e contribuo de forma significativa para o meu campo de atuação.</p>
     </section>
 
     <!-- Rodapé -->
@@ -35,5 +43,20 @@
             <li><a href="https://github.com/douglasgroff001" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
         </ul>
     </footer>
+	
+    <!-- Script JavaScript ajustado -->
+    <script>
+	// Seleciona o ícone do hambúrguer e o menu
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const menu = document.getElementById('menu');
+
+	// Adiciona um ouvinte de evento para o clique no hambúrguer
+		hamburgerMenu.addEventListener('click', function() {
+    // Alterna a classe 'open' no ícone do hambúrguer (faz ele virar um 'X')
+		hamburgerMenu.classList.toggle('open'); 
+    // Alterna a classe 'active' no menu de navegação (abre ou fecha o menu)
+		menu.classList.toggle('active');
+	});
+    </script>
 </body>
 </html>
