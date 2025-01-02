@@ -11,16 +11,24 @@
 
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="projetos.html">Trabalhos</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <!-- Ícone do hambúrguer para dispositivos móveis -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+		<!-- Menu de navegação -->
+        <ul id="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="projetos.html">Trabalhos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
 
     <section class="contato">
         <h1>Entre em Contato</h1>
@@ -70,6 +78,18 @@
             // Redirecionando para o link
             window.open(whatsappLink, "_blank");
         }
+
+	// Seleciona o ícone do hambúrguer e o menu
+		const hamburgerMenu = document.getElementById('hamburger-menu');
+		const menu = document.getElementById('menu');
+
+	// Adiciona um ouvinte de evento para o clique no hambúrguer
+		hamburgerMenu.addEventListener('click', function() {
+    // Alterna a classe 'open' no ícone do hambúrguer (faz ele virar um 'X')
+		hamburgerMenu.classList.toggle('open'); 
+    // Alterna a classe 'active' no menu de navegação (abre ou fecha o menu)
+		menu.classList.toggle('active');
+	});
     </script>
 	
     <footer>
