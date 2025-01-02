@@ -346,6 +346,104 @@ footer ul li a:hover {
     }
 }
 
+/* INÍCIO DO MENU HAMBURGUER */
+/* Estilos do menu hambúrguer */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease; /* Transição suave */
+}
+
+.hamburger-menu .bar {
+    background-color: #e0e0e0;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Transições para as barras */
+}
+
+/* Mudança do ícone para "X" quando o menu é aberto */
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(20px, -5px); /* Primeira barra vira para diagonal */
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0; /* Segunda barra desaparece */
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(20px, 5px); /* Terceira barra vira para diagonal */
+}
+
+/* Menu de navegação oculto em dispositivos móveis */
+#menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#menu li {
+    margin: 0 20px;
+}
+
+#menu li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#menu li a:hover {
+    color: #bb86fc;
+    background-color: #2a2a2a;
+}
+
+/* Quando a tela é menor ou igual a 768px, o menu hambúrguer será exibido */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    #menu {
+        display: none; /* Inicialmente, o menu está oculto */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #1f1f1f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    #menu li {
+        margin: 15px 0; /* Menor espaçamento entre os itens do menu */
+    }
+
+    #menu.active {
+        display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
+    }
+}
+
+/* Quando o menu hambúrguer está ativo, o menu de navegação é mostrado */
+@media (max-width: 480px) {
+    #menu li a {
+        font-size: 20px;
+    }
+}
+
+
+
+/* FIM DO MENU HAMBURGUER */
+
+
 @media (max-width: 480px) {
     header nav ul {
         flex-direction: column;
