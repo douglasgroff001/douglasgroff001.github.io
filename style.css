@@ -1,3 +1,14 @@
+/* Declaração de variáveis para cores e fontes */
+:root {
+    --cor-principal: #bb86fc;
+    --cor-secundaria: #121212;
+    --cor-texto: #e0e0e0;
+    --cor-fundo: #1f1f1f;
+    --cor-destaque: #333333;
+    --cor-hover: #2a2a2a;
+    --cor-borda: #333333;
+}
+
 /* Reset de estilos */
 * {
     margin: 0;
@@ -8,16 +19,16 @@
 /* Corpo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
-    line-height: 1.6; /* Melhor legibilidade */
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    line-height: 1.6;
 }
 
 /* Cabeçalho */
 header {
-    background-color: #1f1f1f; /* Cor mais escura para o cabeçalho */
+    background-color: var(--cor-fundo);
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona um leve sombreamento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header nav ul {
@@ -31,17 +42,17 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #e0e0e0; /* Texto claro */
+    color: var(--cor-texto);
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
-    padding: 5px 10px; /* Espaço ao redor do texto */
-    border-radius: 4px; /* Bordas arredondadas */
+    font-size: 1.125rem; /* Melhor unidade para escalabilidade */
+    transition: color 0.3s, background-color 0.3s;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 header nav ul li a:hover {
-    color: #bb86fc; /* Cor ao passar o mouse */
-    background-color: #2a2a2a; /* Fundo para o hover */
+    color: var(--cor-principal);
+    background-color: var(--cor-hover);
 }
 
 /* Seções */
@@ -55,10 +66,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #2a2a2a; /* Fundo mais suave para a introdução */
+    background-color: var(--cor-hover);
     border-radius: 8px;
     padding: 50px 20px;
-    flex-wrap: wrap; /* Permite que os itens se ajustem em telas menores */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -67,14 +78,13 @@ section {
 }
 
 .intro h1 {
-    color: #bb86fc; /* Cor roxa para o título */
-    font-size: 2.5em;
+    color: var(--cor-principal);
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .intro p {
-    font-size: 1.2em;
-    color: #e0e0e0; /* Texto claro */
+    font-size: 1.2rem;
 }
 
 .intro-img {
@@ -84,24 +94,24 @@ section {
 }
 
 .foto-perfil {
-    width: 80%;
+    width: 75%;
     border-radius: 50%;
-    border: 4px solid #bb86fc; /* Borda roxa para destacar */
-    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    border: 4px solid var(--cor-principal);
+    object-fit: cover;
 }
 
 /* Seção de Destaques */
 .destaques {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Permite ajuste responsivo */
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 20px;
 }
 
 .projeto {
-    width: 15%; /* Reduzido pela metade */
-    background-color: #333333; /* Fundo escuro suave para cada projeto */
+    width: 15%;
+    background-color: var(--cor-destaque);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -109,34 +119,34 @@ section {
 }
 
 .projeto:hover {
-    transform: translateY(-10px); /* Efeito de hover */
+    transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .projeto img {
-    width: 80%; /* Reduz o tamanho da imagem */
+    width: 80%;
     border-radius: 8px;
-    margin: 0 auto; /* Centraliza a imagem */
+    margin: 0 auto;
     display: block;
 }
 
 .projeto h3 {
-    color: #bb86fc; /* Cor roxa para os títulos dos projetos */
+    color: var(--cor-principal);
     margin-top: 10px;
 }
 
 .projeto p {
-    color: #e0e0e0; /* Texto claro */
+    color: var(--cor-texto);
 }
 
 .projeto p a {
-    color: #e0e0e0; /* Link branco */
-    text-decoration: none; /* Remove sublinhado */
+    color: var(--cor-texto);
+    text-decoration: none;
     transition: color 0.3s;
 }
 
 .projeto p a:hover {
-    color: #bb86fc; /* Link roxo ao passar o mouse */
+    color: var(--cor-principal);
 }
 
 /* Seção Trabalhos */
@@ -146,12 +156,12 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px; /* Espaçamento interno */
+    padding: 20px;
 }
 
 .trabalhos .projeto {
-    width: 300px; /* Tamanho fixo para uniformizar */
-    background-color: #333333;
+    width: 300px;
+    background-color: var(--cor-destaque);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -160,170 +170,112 @@ section {
 }
 
 .trabalhos .projeto img {
-    width: 80%; /* Ajuste proporcional para imagens */
+    width: 80%;
     margin: 0 auto;
     display: block;
     border-radius: 8px;
 }
 
 .trabalhos .projeto h3 {
-    color: #bb86fc;
+    color: var(--cor-principal);
     margin-top: 10px;
 }
 
 .trabalhos .projeto p {
-    color: #e0e0e0;
+    color: var(--cor-texto);
     margin-top: 10px;
 }
 
 /* Estilo para a seção de contato */
 .contato {
-    max-width: 600px; /* Limita a largura da seção */
-    margin: 50px auto; /* Centraliza a seção na página */
-    background-color: #1f1f1f; /* Fundo escuro */
-    padding: 20px 30px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    text-align: center; /* Centraliza texto e elementos */
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: var(--cor-fundo);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
 }
 
 .contato h1 {
-    color: #bb86fc; /* Cor do título */
-    font-size: 2em; /* Tamanho do título */
-    margin-bottom: 10px; /* Espaçamento inferior */
+    color: var(--cor-principal);
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
 .contato p {
-    color: #e0e0e0; /* Texto claro */
-    font-size: 1.1em; /* Aumenta o tamanho do texto */
-    margin-bottom: 20px; /* Espaçamento inferior */
+    color: var(--cor-texto);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
 }
 
 /* Estilo para o formulário */
 #contato-form {
     display: flex;
-    flex-direction: column; /* Organiza os campos em coluna */
-    gap: 15px; /* Espaço entre os campos */
+    flex-direction: column;
+    gap: 15px;
 }
 
 .campo {
-    text-align: left; /* Alinha as labels à esquerda */
+    text-align: left;
 }
 
 .campo label {
-    color: #e0e0e0; /* Cor do texto */
-    font-weight: bold; /* Destaca o texto */
-    margin-bottom: 5px; /* Espaçamento inferior */
-    display: block; /* Garante que fique acima do campo */
+    color: var(--cor-texto);
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
 }
 
 .campo input,
 .campo textarea {
-    width: 100%; /* Preenche a largura do formulário */
-    padding: 10px; /* Espaçamento interno */
-    border: 2px solid #333333; /* Borda inicial */
-    border-radius: 5px; /* Bordas arredondadas */
-    background-color: #2a2a2a; /* Fundo escuro */
-    color: #e0e0e0; /* Texto claro */
-    font-size: 1em; /* Tamanho da fonte */
-    transition: border 0.3s; /* Animação na borda */
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 5px;
+    background-color: #2a2a2a;
+    color: var(--cor-texto);
+    font-size: 1rem;
+    transition: border 0.3s;
 }
 
 .campo input:focus,
 .campo textarea:focus {
-    border-color: #bb86fc; /* Muda a cor da borda ao focar */
-    outline: none; /* Remove o contorno padrão */
+    border-color: var(--cor-principal);
+    outline: none;
 }
 
 .campo textarea {
-    resize: vertical; /* Permite redimensionar apenas verticalmente */
+    resize: vertical;
 }
 
 /* Botão de envio */
 button[type="button"] {
-    padding: 10px 20px; /* Espaçamento interno */
-    background-color: #bb86fc; /* Fundo roxo */
-    color: #121212; /* Texto escuro */
-    border: none; /* Remove borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 1.1em; /* Aumenta o texto */
-    font-weight: bold; /* Destaca o texto */
-    cursor: pointer; /* Mostra o cursor de clique */
-    transition: background-color 0.3s, transform 0.2s; /* Animações */
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    color: var(--cor-secundaria);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button[type="button"]:hover {
-    background-color: #a673e8; /* Cor mais clara ao passar o mouse */
-    transform: scale(1.05); /* Leve aumento no botão */
+    background-color: #a673e8;
+    transform: scale(1.05);
 }
 
 button[type="button"]:active {
-    transform: scale(0.95); /* Reduz o botão ao clicar */
+    transform: scale(0.95);
 }
 
 /* Responsividade */
-@media (max-width: 480px) {
-    .contato {
-        padding: 15px; /* Reduz o padding em telas menores */
-    }
-
-    .contato h1 {
-        font-size: 1.8em; /* Reduz tamanho do título */
-    }
-
-    .contato p {
-        font-size: 1em; /* Ajusta tamanho do texto */
-    }
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    background-color: #1f1f1f;
-    color: #e0e0e0;
-    padding: 10px 0; /* Reduzindo o padding para menor altura */
-    margin-top: 40px;
-    border-top: 2px solid #bb86fc; /* Linha decorativa no topo */
-    font-size: 0.9em; /* Diminuindo tamanho da fonte */
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 5px; /* Reduzindo espaço entre elementos */
-    display: flex;
-    justify-content: center;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 10px; /* Menor espaçamento entre links */
-}
-
-footer ul li a {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 20px; /* Diminuindo tamanho dos ícones */
-    transition: color 0.3s;
-}
-
-footer ul li a:hover {
-    color: #bb86fc;
-}
-
-/* Media Queries para Responsividade */
 @media (max-width: 768px) {
     .intro {
         flex-direction: column;
         text-align: center;
-    }
-
-    .intro-text {
-        max-width: 100%;
-    }
-
-    .intro-img {
-        max-width: 60%;
     }
 
     .destaques {
@@ -346,8 +298,7 @@ footer ul li a:hover {
     }
 }
 
-/* INÍCIO DO MENU HAMBURGUER */
-/* Estilos do menu hambúrguer */
+/* Menu hambúrguer */
 .hamburger-menu {
     display: none;
     flex-direction: column;
@@ -356,31 +307,33 @@ footer ul li a:hover {
     height: 25px;
     justify-content: space-between;
     align-items: center;
-    transition: transform 0.3s ease; /* Transição suave */
+    transition: transform 0.3s ease;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
 }
 
 .hamburger-menu .bar {
-    background-color: #e0e0e0;
+    background-color: var(--cor-texto);
     height: 4px;
     width: 100%;
     border-radius: 2px;
-    transition: all 0.3s ease; /* Transições para as barras */
+    transition: all 0.3s ease;
 }
 
-/* Mudança do ícone para "X" quando o menu é aberto */
 .hamburger-menu.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(20px, -5px); /* Primeira barra vira para diagonal */
+    transform: rotate(45deg) translate(20px, -5px);
 }
 
 .hamburger-menu.open .bar:nth-child(2) {
-    opacity: 0; /* Segunda barra desaparece */
+    opacity: 0;
 }
 
 .hamburger-menu.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(20px, 5px); /* Terceira barra vira para diagonal */
+    transform: rotate(-45deg) translate(20px, 5px);
 }
 
-/* Menu de navegação oculto em dispositivos móveis */
+/* Menu de navegação */
 #menu {
     display: flex;
     justify-content: center;
@@ -392,91 +345,111 @@ footer ul li a:hover {
 }
 
 #menu li a {
-    color: #e0e0e0;
+    color: var(--cor-texto);
     text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s;
+    font-size: 1.125rem;
+    transition: color 0.3s, background-color 0.3s;
     padding: 5px 10px;
     border-radius: 4px;
 }
 
 #menu li a:hover {
-    color: #bb86fc;
-    background-color: #2a2a2a;
+    color: var(--cor-principal);
+    background-color: var(--cor-hover);
 }
 
-/* Quando a tela é menor ou igual a 768px, o menu hambúrguer será exibido */
+/* Menu hambúrguer em telas menores */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: flex;
     }
 
     #menu {
-        display: none; /* Inicialmente, o menu está oculto */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: #1f1f1f;
+        background-color: var(--cor-fundo);
         position: absolute;
         top: 60px;
         left: 0;
         padding: 10px 0;
     }
 
-    #menu li {
-        margin: 15px 0; /* Menor espaçamento entre os itens do menu */
-    }
-
     #menu.active {
-        display: flex; /* Mostra o menu quando a classe 'active' é adicionada */
+        display: flex;
     }
 }
 
-/* Quando o menu hambúrguer está ativo, o menu de navegação é mostrado */
 @media (max-width: 480px) {
     #menu li a {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 }
 
+/* Rodapé */
+footer {
+    text-align: center;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid #bb86fc;
+    font-size: 0.9em;
+}
 
+/* Lista de links no rodapé */
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar linha quando necessário */
+    gap: 15px; /* Espaço entre os links */
+}
 
-/* FIM DO MENU HAMBURGUER */
+/* Links do rodapé */
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
 
+footer ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
 
-@media (max-width: 480px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
+footer ul li a:hover {
+    color: #bb86fc;
+}
 
-    header nav ul li {
-        margin: 10px 0;
-    }
-
-    .intro h1 {
-        font-size: 1.8em;
-    }
-
-    .intro p {
-        font-size: 1em;
-    }
-
-    .trabalhos {
-        flex-direction: column;
-    }
-
-    .trabalhos .projeto {
-        width: 100%;
-    }
-
+/* Media Queries para Responsividade no Rodapé */
+@media (max-width: 768px) {
     footer ul {
-        flex-direction: row; /* Garante que os ícones fiquem lado a lado */
-        justify-content: center; /* Centraliza os ícones */
+        flex-direction: row; /* Alinha os links lado a lado */
+        gap: 20px; /* Aumenta o espaço entre os links */
     }
 
     footer ul li {
-        display: inline-block; /* Mantém os ícones lado a lado */
-        margin: 0 15px; /* Adiciona espaço entre os ícones */
+        margin: 0; /* Remove o espaçamento adicional entre os links */
+    }
+}
+
+@media (max-width: 480px) {
+    footer ul {
+        flex-direction: row; /* Mantém os links lado a lado */
+        justify-content: center; /* Centraliza os links */
+        gap: 15px; /* Ajusta o espaço entre os links */
+    }
+
+    footer ul li {
+        margin: 0 15px; /* Espaçamento leve entre os links */
+    }
+
+    footer ul li a {
+        font-size: 18px; /* Ajusta o tamanho do texto dos links */
     }
 }
