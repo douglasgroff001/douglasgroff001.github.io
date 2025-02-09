@@ -1,81 +1,228 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Douglas Groff Alves, Analista de Sistemas e estudante de Redes de Computadores e Análise e Desenvolvimento de Sistemas.">
-    <title>Meu Portfólio</title>
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <title>Portfólio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <!-- Cabeçalho -->
     <header>
-    <nav>
-        <!-- Ícone do hambúrguer para dispositivos móveis -->
-        <div class="hamburger-menu" id="hamburger-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-		<!-- Menu de navegação -->
-        <ul id="menu">
-            <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="projetos.html">Trabalhos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
-    </nav>
-</header>
-    
-    <!-- Seção de Introdução -->
-    <section class="intro">
+        <nav id="menu">
+            <div class="logo">
+                <a href="#">Douglas Groff</a>
+            </div>
+            <div class="menu-hamburguer" id="menu-hamburguer">
+                &#9776; <!-- Ícone do hambúrguer -->
+            </div>
+            <div id="menu-items">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#trabalhos">Trabalhos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home">
         <div class="intro-text">
-            <h1>Olá, sou o Douglas Groff Alves</h1>
-            <p>Sou Analista de Sistemas e estou finalizando minha formação em Redes de Computadores para ingressar em Análise e Desenvolvimento de Sistemas.</p>
+            <h1>Olá, sou Douglas Groff Alves</h1>
+            <p>Analista de Sistemas com formação em Redes de Computadores e em transição para Análise e Desenvolvimento de Sistemas.</p>
         </div>
         <div class="intro-img">
             <img src="doug.jpg" alt="Foto de perfil de Douglas Groff Alves" class="foto-perfil">
         </div>
     </section>
 
-    <!-- Seção de Destaque de Projetos -->
-    <section class="destaques">
-        <h2>Trabalhos</h2>
+    <section id="sobre">
+        <h1>Sobre Mim</h1>
+        <p>Sou apaixonado por tecnologia e estou sempre buscando aprender novas linguagens e ferramentas. Tenho experiência em programação, 
+		desenvolvimento web, banco de dados e administração de sistemas. Meu foco é otimizar processos e implementar soluções inovadoras no ambiente corporativo.</p>
+    </section>
+
+    <section id="trabalhos">
+        <h2>Meus Trabalhos</h2>
         <div class="projeto">
-            <img src="logo_soprano.png" alt="Logo Soprano" class="logo-soprano">
-            <h3>Soprano</h3>
-            <u><p><a href="projetos.html">Veja mais</a></p></u>
-        </div>
-        <div class="projeto">
-            <img src="logo_adm.png" alt="Logo ADMRH" class="logo-admrh">
-            <h3>ADMRH Informática</h3>
-            <u><p><a href="projetos.html">Veja mais</a></p></u>
+            <div class="projeto-item">
+                <img src="logo_adm.png" alt="Logo da ADMRH" class="logo">
+                <div class="info">
+                    <h3>ADMRH</h3>
+                    <p>Na ADMRH, atuo principalmente com PL/SQL, desenvolvimento de relatórios utilizando a ferramenta Jasper Reports e processos relacionados a Recursos Humanos. 
+					Além disso, tenho experiência com manutenção de código em Java, administração de sistemas Linux e utilização avançada do Excel. 
+					Também sou responsável pela criação e manutenção de servidores de domínio na nuvem AWS, integrando-os com serviços do registro.br.</p>
+                </div>
+            </div>
+            <div class="projeto-item">
+                <img src="logo_soprano.png" alt="Logo da Soprano" class="logo">
+                <div class="info">
+                    <h3>Soprano</h3>
+                    <p>Iniciei minha trajetória na Soprano como menor aprendiz, aproveitando essa oportunidade para adquirir o máximo de conhecimento e me preparar para o mercado de trabalho. 
+					Ao término do contrato como aprendiz, fui efetivado como auxiliar de produção, assumindo a responsabilidade de injetar poliuretano em diversas peças plásticas. 
+					Com dedicação e esforço, fui promovido a operador de máquina 1 e, posteriormente, a operador de máquina 2. Por fim, decidi encerrar minha jornada na empresa para seguir meu sonho de atuar na área da informática.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Rodapé -->
+<section id="contato">
+    <div class="contact-info">
+        <h2>Entre em Contato</h2>
+        <p>Se você tem alguma dúvida, projeto ou oportunidade, sinta-se à vontade para me enviar uma mensagem!</p>
+
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" required placeholder="Digite sua mensagem"></textarea>
+            </div>
+            <button type="button" onclick="enviarMensagemWhatsApp()">Enviar</button>
+        </form>
+    </div>
+</section>
+
     <footer>
-        <p>&copy; 2024 Douglas Groff Alves. Este portfólio foi desenvolvido para destacar minha trajetória e projetos.</p>
+        <p>&copy; 2025 Douglas Groff Alves. Desenvolvido para destacar minha trajetória e projetos.</p>
         <ul>
-            <li><a href="https://www.instagram.com/douglas.groff.71/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/douglasgroffalves" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/douglasgroff001" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/douglas.groff.71/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/douglasgroffalves" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/douglasgroff001" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
         </ul>
     </footer>
 
-    <!-- Script JavaScript ajustado -->
     <script>
-	// Seleciona o ícone do hambúrguer e o menu
-		const hamburgerMenu = document.getElementById('hamburger-menu');
-		const menu = document.getElementById('menu');
+        <!-- Inicio Menu hamburguer -->
+document.addEventListener("DOMContentLoaded", function() {
+    const menuHamburguer = document.querySelector(".menu-hamburguer");
+    const menuItems = document.querySelector("#menu-items");
 
-	// Adiciona um ouvinte de evento para o clique no hambúrguer
-		hamburgerMenu.addEventListener('click', function() {
-    // Alterna a classe 'open' no ícone do hambúrguer (faz ele virar um 'X')
-		hamburgerMenu.classList.toggle('open'); 
-    // Alterna a classe 'active' no menu de navegação (abre ou fecha o menu)
-		menu.classList.toggle('active');
-	});
+    menuHamburguer.addEventListener("click", function() {
+        menuItems.classList.toggle("active"); // Adiciona ou remove a classe 'active'
+        menuHamburguer.classList.toggle("open"); // Gira o ícone do menu
+    });
+});
+        		
+        <!-- Fim Menu hamburguer -->
+        
+        	 <!-- Início envio de mensagens para o WhatsApp -->
+        function enviarMensagemWhatsApp() {
+            var nome = document.getElementById("name").value; // Alterado de "nome" para "name"
+            var email = document.getElementById("email").value; // Correto
+            var mensagem = document.getElementById("message").value; // Alterado de "mensagem" para "message"
+        
+            // Sanitizando e criando a mensagem para WhatsApp
+            var mensagemFinal = "Você recebeu uma nova mensagem de contato:\n\n" +
+                                "Nome: " + nome + "\n" +
+                                "E-mail: " + email + "\n" +
+                                "Mensagem: " + mensagem;
+        
+            // Codificando a mensagem para URL
+            var mensagemCodificada = encodeURIComponent(mensagemFinal);
+        
+            // Número do WhatsApp (utilize o número no formato internacional, sem "+" e espaços)
+            var whatsappNumber = "5554996305968"; 
+        
+            // Criando o link para o WhatsApp
+            var whatsappLink = "https://wa.me/" + whatsappNumber + "?text=" + mensagemCodificada;
+        
+            // Redirecionando para o link
+            window.open(whatsappLink, "_blank");
+        }
+        	 
+        	 <!-- Fim envio de mensagens para o WhatsApp -->
+			 
+			 
+			 <!-- INICIO Faz com que proiba de enviar mensagems sem texto -->
+    // Aguardar o carregamento completo da página
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit', function(event) {
+            // Prevenir o envio do formulário caso a validação falhe
+            let isValid = true;
+
+            const name = form.querySelector('#name');
+            const email = form.querySelector('#email');
+            const message = form.querySelector('#message');
+
+            // Verifica se todos os campos obrigatórios foram preenchidos
+            if (!name.value.trim()) {
+                isValid = false;
+                name.classList.add('error'); // Aplica a classe de erro
+            } else {
+                name.classList.remove('error'); // Remove a classe de erro
+            }
+
+            if (!email.value.trim()) {
+                isValid = false;
+                email.classList.add('error');
+            } else {
+                email.classList.remove('error');
+            }
+
+            if (!message.value.trim()) {
+                isValid = false;
+                message.classList.add('error');
+            } else {
+                message.classList.remove('error');
+            }
+
+            // Se algum campo estiver vazio, impede o envio do formulário
+            if (!isValid) {
+                event.preventDefault(); // Impede o envio do formulário
+                alert('Por favor, preencha todos os campos obrigatórios!');
+            }
+        });
+    });
+	
+	<!-- FIM Faz com que proiba de enviar mensagems sem texto -->
+			 
+	
+	window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(function(section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            section.classList.add('visible');
+        } else {
+            section.classList.remove('visible');
+        }
+    });
+});
+
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(function(section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            section.classList.add('visible');
+        } else {
+            section.classList.remove('visible');
+        }
+    });
+});
+	
     </script>
 </body>
+
 </html>
